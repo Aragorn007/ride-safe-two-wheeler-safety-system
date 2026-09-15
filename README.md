@@ -1,52 +1,73 @@
-# Ride Safe – Two Wheeler Safety System
+# Ride Safe - AI Based Two Wheeler Safety System
 
 ## Overview
 
-Ride Safe is an intelligent two-wheeler safety system designed to improve rider safety and reduce accidents through real-time monitoring and preventive measures. The system integrates multiple sensors and control mechanisms to ensure safer vehicle operation and encourage responsible riding behavior.
+Ride Safe is an AI-powered helmet detection system designed to improve rider safety and reduce accidents caused by non-compliance with helmet usage.
+
+The system uses a machine learning model trained using Edge Impulse and deployed on a XIAO ESP32S3 Sense microcontroller with an integrated camera module.
 
 ## Problem Statement
 
-Road accidents involving two-wheelers are often caused by unsafe riding practices, lack of protective equipment usage, rider fatigue, and delayed emergency response. Existing safety solutions are limited in their ability to provide real-time intervention and monitoring.
+A significant number of road accidents occur due to riders not wearing helmets, increasing the risk of severe head injuries.
 
 ## Proposed Solution
 
-Ride Safe is a smart safety platform that continuously monitors rider and vehicle conditions using embedded sensors. The system detects unsafe situations and initiates appropriate alerts or safety actions to minimize risk and improve rider protection.
+The camera continuously captures images of the rider.
 
-## Key Features
+The trained AI model determines whether a helmet is present.
 
-* Real-time rider safety monitoring
-* Smart accident detection mechanism
-* Emergency alert functionality
-* Sensor-based safety checks
-* Intelligent warning and notification system
-* Improved rider awareness and accident prevention
+If a helmet is detected, the bike ignition/key mechanism is enabled.
 
-## System Architecture
-
-The system consists of:
-
-* Microcontroller-based control unit
-* Safety monitoring sensors
-* Alert and notification modules
-* Communication interface
-* Power management subsystem
+If no helmet is detected, the ignition remains locked.
 
 ## Technologies Used
 
-* Embedded Systems
-* Microcontrollers
-* IoT Technologies
-* Sensor Integration
-* C Programming
-* Electronic Circuit Design
+- Edge Impulse
+- Arduino IDE
+- XIAO ESP32S3 Sense
+- Embedded AI
+- Computer Vision
+- Machine Learning
 
-## Results
+## Working
 
-* Enhanced rider safety through continuous monitoring
-* Faster response to emergency situations
-* Reduced risk of accidents caused by unsafe riding conditions
-* Reliable real-time detection and alert generation
+1. Camera captures rider image.
+2. AI model detects helmet presence.
+3. Prediction is processed locally on ESP32.
+4. Ignition switch is enabled/disabled accordingly.
 
-## Innovation
+## Hardware
 
-The project combines multiple safety mechanisms into a single integrated platform, enabling proactive accident prevention and rapid emergency response for two-wheeler riders.
+- XIAO ESP32S3 Sense
+- Camera Module
+- Rotary Bike Switch
+- Power Supply Circuit
+
+## Future Improvements
+
+- IR filter for night-time detection
+- Improved training dataset
+- Direct engine integration
+- Alarm system
+
+## Cost
+
+| Component | Cost |
+|-----------|------|
+| XIAO ESP32S3 Sense | ₹1500 |
+| Other Components | ₹100 |
+| Total | ₹1600 |
+
+## Social Impact
+
+- Reduces head injuries
+- Promotes safer riding culture
+
+## Team
+
+Team T212
+
+## Gallery
+
+<img width="1600" height="1200" alt="Helmet_detection_output" src="https://github.com/user-attachments/assets/775e6aa1-2c3d-4d38-8f72-de864891bb5d" />
+<img width="2048" height="1447" alt="Certificate" src="https://github.com/user-attachments/assets/42377d7b-f1aa-4f27-a863-72ad358e4741" />
